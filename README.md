@@ -1,6 +1,6 @@
 This demonstrates the installation of WSO2 APIM Microgateway to manage APIs in a Istio environment. 
 
-Follow the steps in [S02-APIM_for_Istio_Services_MTLS](./S02-APIM_for_Istio_Services_MTLS/README_2.md) scenario.
+Follow the steps in [S02-APIM_for_Istio_Services_MTLS](https://github.com/vinok88/WSO2_MGW_istio_MTLS_APIM/tree/master/S02-APIM_for_Istio_Services_MTLS) scenario.
 
 Optionally follow the below steps to install a API manager instance and security token service.
 
@@ -81,7 +81,9 @@ to perform the following actions.
 The following commands will help you to push the API to the API portal in Kubernetes.
 Commands of the API Controller can be found [here](https://github.com/wso2/product-apim-tooling/blob/3.2.x/import-export-cli/docs/apictl.md) 
 
-
+- Go to scenario directory
+    ```sh
+    >> cd ./S02-APIM_for_Istio_Services_MTLS
 - Add the API portal as an environment to the API controller using the following command.
 
     ```sh
@@ -97,7 +99,7 @@ Commands of the API Controller can be found [here](https://github.com/wso2/produ
 
     ```sh
     >> apictl init online-store \
-                --oas=./scenarios/scenario-1/products_swagger.yaml \
+                --oas=./swagger.yaml \
                 --initial-state=PUBLISHED
     
     Output:
@@ -126,7 +128,7 @@ Commands of the API Controller can be found [here](https://github.com/wso2/produ
 You can obtain a JWT token using the API Controller command as below.
 
     ```sh
-    >> apictl get-keys -n online-store -v v1.0.0 -e k8s --provider admin -k
+    >> apictl get-keys -n online-store-api -v v1.0.0 -e k8s --provider admin -k
     
     Output:
     API name:  OnlineStore & version:  v1.0.0 exists
