@@ -390,7 +390,7 @@ and configurations related to API operator and API portal.
 ```sh
 >> apictl remove env k8s;
    apictl set --mode k8s;
-   apictl delete api online-store;
+   apictl delete api online-store-api-mlts;
    apictl delete -f scenarios/scenario-1/products_dep.yaml;
    apictl delete -f k8s-artifacts/api-portal/;
    apictl uninstall api-operator;
