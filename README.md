@@ -15,7 +15,16 @@ This works in Istio permissive mode and Strict MTLS mode.
     - Minimum CPU : 8vCPU
     - Minimum Memory : 8GB
     
-- [Istio v1.6.5 or above](https://istio.io/docs/setup/platform-setup/)
+- Download Istio 1.8.1
+
+    ``` sh 
+    curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.8.1 sh -
+    ```
+- Deploy Istio in K8s
+    ``` sh
+    cd istio-1.8.1/bin
+    ./istioctl install --set profile=demo -y
+    ```
 
 - An account in DockerHub or private docker registry
 
