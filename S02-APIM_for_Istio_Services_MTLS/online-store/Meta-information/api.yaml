@@ -1,0 +1,15 @@
+id:
+  providerName: admin
+  apiName: Online-Store-Api
+  version: v1.0.0
+description: This API contains operations related to online shopping store.
+type: HTTP
+context: /storemep/v1.0.0
+contextTemplate: /storemep/{version}
+availableTiers:
+- name: Unlimited
+status: PUBLISHED
+visibility: public
+transports: http,https
+endpointConfig: '{"endpoint_type":"http","production_endpoints":{"url":"http://istio-ingressgateway.istio-system/storemep/v1.0.0"}}'
+enableStore: true

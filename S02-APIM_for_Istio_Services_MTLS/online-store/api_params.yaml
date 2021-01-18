@@ -1,0 +1,18 @@
+environments:
+  - name: aec
+    endpoints:
+      production:
+      sandbox:
+  - name: dev
+    endpoints:
+      production:
+      sandbox:
+  - name: k8s
+    endpoints:
+      production:
+      sandbox:
+
+deploy:
+  import:
+    update: true
+    preserveProvider: true
